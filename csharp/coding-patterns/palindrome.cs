@@ -27,9 +27,4 @@ bool IsPalindrome(string input) {
 var input = args.Length > 0 ? args[0] ?? string.Empty : string.Empty;
 var result = IsPalindrome(input);
 
-if (result) {
-    Console.WriteLine($"{input} is a palindrome.");
-}
-else {
-    Console.WriteLine($"{input} is not a palindrome.");
-}
+Console.WriteLine($"{input} is {(result ? "a palindrome." : "not a palindrome.")}");
