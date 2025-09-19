@@ -8,19 +8,18 @@ ValueTuple<int, int>? IndexesThatSumToTarget(int[] nums, int target) {
 
     while (left < right) {
         var sum = nums[left] + nums[right];
-        if (sum == target) {
-            return (left, right);
-        }
 
-        if (sum < target) {
+        // if the sum is smaller, increment the left pointer to increase the sum
+        if (sum < target)
             left += 1;
-        }
-        else {
+        // if the sum is larger, decrement the right pointer to decrease the sum
+        else if (sum > target)
             right -= 1;
-        }
+        else
+            return [left, right];
     }
 
-    return null;
+    return [];
 }
 
 var nums1 = [-5, -2, 3, 4, 6];
