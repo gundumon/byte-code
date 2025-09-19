@@ -23,5 +23,12 @@ ValueTuple<int, int>? IndexesThatSumToTarget(int[] nums, int target) {
     return null;
 }
 
-var indexes = IndexesThatSumToTarget([-5, -2, 3, 4, 6], 7);
-Console.WriteLine(indexes);
+var nums1 = [-5, -2, 3, 4, 6];
+var tgt1 = 7;
+var indexes = IndexesThatSumToTarget(nums1, tgt1);
+Console.WriteLine($"{nums1} | {tgt1} -> {indexes}");
+
+nums1 = [1, 1, 1];
+tgt1 = 2;
+indexes = IndexesThatSumToTarget(nums1, tgt1);
+Console.WriteLine($"{nums1} | {tgt1} -> {indexes}");
