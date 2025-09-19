@@ -1,4 +1,4 @@
-bool IsPalindrome(string input) {   
+bool IsPalindrome(string input) {
     var left = 0;
     var right = input.Length - 1;
 
