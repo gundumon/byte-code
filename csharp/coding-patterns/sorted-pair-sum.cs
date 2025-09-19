@@ -1,5 +1,10 @@
 /*
 Given an array of integers sorted in ascending order and a target value, return the indexes of any pair of numbers in the array that sum to the target. The order of the indexes in the result doesn't matter. If no pair is found, return an empty array.
+
+Example:
+    int[] nums = [-5, -2, 3, 4, 6]
+    int target = 7
+    output: [2, 3]
 */
 
 List<int> IndexesThatSumToTarget(int[] nums, int target) {
@@ -21,9 +26,3 @@ List<int> IndexesThatSumToTarget(int[] nums, int target) {
 
     return [];
 }
-
-int[] nums = [-5, -2, 3, 4, 6];
-int target = 7;
-
-var result = IndexesThatSumToTarget(nums, target);
-Console.WriteLine($"[{string.Join(", ", nums)}], {target} -> [{string.Join(", ", result)}]");
