@@ -11,6 +11,13 @@ ValueTuple<int, int>? IndexesThatSumToTarget(int[] nums, int target) {
         if (sum == target) {
             return (left, right);
         }
+
+        if (sum < target) {
+            left += 1;
+        }
+        else {
+            right -= 1;
+        }
     }
 
     return null;
