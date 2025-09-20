@@ -9,7 +9,7 @@ Example:
     output: [2, 3]
 */
 public class SortedPairSum {
-    public List<int> FindIndexes(int[] nums, int target) {
+    public static List<int> FindIndexes(int[] nums, int target) {
         var left = 0;
         var right = nums.Length - 1;
 
