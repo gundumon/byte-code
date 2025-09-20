@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{BF231F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "coding-patterns", "coding-patterns", "{B98F0D67-BF54-42CF-A9F7-03F7E0EE4144}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codingpatterns", "csharp\coding-patterns\codingpatterns.csproj", "{1BE09CC8-1E53-40C0-8D36-0B2B784CF02F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codingpatterns", "csharp\coding-patterns\CodingPatterns.csproj", "{1BE09CC8-1E53-40C0-8D36-0B2B784CF02F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
