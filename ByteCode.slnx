@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/csharp/" />
+  <Folder Name="/csharp/coding-patterns/">
+    <Project Path="csharp/coding-patterns/CodingPatterns.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+</Solution>
