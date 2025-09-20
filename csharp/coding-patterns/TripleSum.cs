@@ -14,15 +14,17 @@ public class TripleSum {
 
         var i = 0;
         while (i < nums.Length) {
-            var j = i++;
+            var j = i + 1;
             var temp = nums[j..];
             var result = FindPairs(temp, nums[i] * -1);
             result.ForEach(x => {
                 triplets.Add(Tuple.Create(nums[i], x.Item1, x.Item2));
             });
+
+            i += 1;
         }
 
-        return [];
+        return triplets;
     }
 
     public static List<Tuple<int, int>> FindPairs(int[] nums, int target) {
@@ -42,7 +44,7 @@ public class TripleSum {
                 right -= 1;
             }
             else {
-                pairs.Add(Tuple.Create(left, right));
+                pairs.Add(Tuple.Create(nums[left], nums[right]));
                 left += 1;
                 right -= 1;
             }
