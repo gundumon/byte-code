@@ -8,7 +8,8 @@ Example:
     Output: [[-3, 1, 2], [-1, 0, 1]]
 */
 public class TripleSum {
-    List<Tuple<int, int, int>> FindAllTriplete(int[] nums) {
+    public static List<Tuple<int, int, int>> FindAllTriplete(int[] nums) {
+        var triplets = new List<Tuple<int, int, int>>();
         Array.Sort(nums);
 
         var i = 0;
@@ -16,19 +17,37 @@ public class TripleSum {
             var j = i++;
             var temp = nums[j..];
             var result = FindPairs(temp, nums[i] * -1);
+            result.ForEach(x => {
+                triplets.Add(Tuple.Create(nums[i], x.Item1, x.Item2));
+            });
         }
 
         return [];
     }
 
-    List<Tuple<int, int>> FindPairs(int[] nums, int target) {
+    public static List<Tuple<int, int>> FindPairs(int[] nums, int target) {
         var pairs = new List<Tuple<int, int>>();
         var left = 0;
         var right = nums.Length - 1;
 
+        while (left < right) {
+            var sum = nums[left] + nums[right];
 
+            // if the sum is smaller, increment the left pointer to increase the sum
+            if (sum < target) {
+                left += 1;
+            }
+            // if the sum is larger, decrement the right pointer to decrease the sum
+            else if (sum > target) {
+                right -= 1;
+            }
+            else {
+                pairs.Add(Tuple.Create(left, right));
+                left += 1;
+                right -= 1;
+            }
+        }
 
-
-        return [];
+        return pairs;
     }
 }
