@@ -12,16 +12,17 @@ public class TripleSum {
         var triplets = new List<Tuple<int, int, int>>();
         Array.Sort(nums);
 
-        var i = 0;
-        while (i < nums.Length) {
-            var j = i + 1;
+        var targetIndex = 0;
+        while (targetIndex < nums.Length) {
+            var target = nums[targetIndex];
+            var j = targetIndex + 1;
             var temp = nums[j..];
-            var result = FindPairs(temp, nums[i] * -1);
+            var result = FindPairs(temp, target * -1);
             result.ForEach(x => {
-                triplets.Add(Tuple.Create(nums[i], x.Item1, x.Item2));
+                triplets.Add(Tuple.Create(target, x.Item1, x.Item2));
             });
 
-            i += 1;
+            targetIndex += 1;
         }
 
         return triplets;
