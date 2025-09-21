@@ -8,28 +8,29 @@ Example:
     Output: [[-3, 1, 2], [-1, 0, 1]]
 */
 public class TripleSum {
-    public static List<Tuple<int, int, int>> FindAllTriplete(int[] nums) {
-        var triplets = new List<Tuple<int, int, int>>();
+    public static HashSet<Tuple<int, int, int>> FindAllTriplets(int[] nums) {
+        var triplets = new HashSet<Tuple<int, int, int>>();
         Array.Sort(nums);
 
         var targetIndex = 0;
         while (targetIndex < nums.Length) {
             var target = nums[targetIndex];
-            var j = targetIndex + 1;
-            var temp = nums[j..];
-            var result = FindPairs(temp, target * -1);
-            result.ForEach(x => {
-                triplets.Add(Tuple.Create(target, x.Item1, x.Item2));
-            });
+            var startIndex = targetIndex + 1;
+            var temp = nums[startIndex..];
+            var pairs = FindPairs(temp, target * -1);
+            foreach (var pair in pairs)
+                triplets.Add(Tuple.Create(target, pair.Item1, pair.Item2));
 
             targetIndex += 1;
+            while ((targetIndex < nums.Length) && (nums[targetIndex] == target))
+                targetIndex += 1;
         }
 
         return triplets;
     }
 
-    public static List<Tuple<int, int>> FindPairs(int[] nums, int target) {
-        var pairs = new List<Tuple<int, int>>();
+    public static HashSet<Tuple<int, int>> FindPairs(int[] nums, int target) {
+        var pairs = new HashSet<Tuple<int, int>>();
         var left = 0;
         var right = nums.Length - 1;
 
