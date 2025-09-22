@@ -12,6 +12,13 @@ public class LargestContainer {
         while (left < right) {
             // calculate the water contained between the current pair of lines
             var water = Math.Min(heights[left], heights[right]) * (right - left);
+            max_water = Math.Max(max_water, water);
+
+            // move the pointers inward, always moving the pointer at the shorter line
+            // if both lines have the same height, move both pointers inward
+            if (heights[left] < heights[right]) {
+
+            }
         }
 
         return max_water;
