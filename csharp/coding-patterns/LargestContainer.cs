@@ -17,7 +17,14 @@ public class LargestContainer {
             // move the pointers inward, always moving the pointer at the shorter line
             // if both lines have the same height, move both pointers inward
             if (heights[left] < heights[right]) {
-
+                left += 1;
+            }
+            else if (heights[left] > heights[right]) {
+                right -= 1;
+            }
+            else {
+                left += 1;
+                right -= 1;
             }
         }
 
