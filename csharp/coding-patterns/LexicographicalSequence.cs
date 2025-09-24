@@ -1,4 +1,4 @@
-﻿namespace CodingPatterns {
-    internal class LexicographicalSequence {
-    }
+﻿namespace CodingPatterns;
+
+internal class LexicographicalSequence {
 }
