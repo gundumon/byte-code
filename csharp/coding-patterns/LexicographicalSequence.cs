@@ -12,8 +12,16 @@ public class LexicographicalSequence {
         var letters = input.ToArray();
         var pivot = letters.Length - 2;
 
+        // locate the first character from the right that breaks non-increasing order
         while ((pivot >= 0) && letters[pivot] >= letters[pivot + 1]) {
             pivot -= 1;
+        }
+
+        // if pivot is not found, the string is already in its largest permutation
+        // reverse the string to obtain the smallest permutation
+        if (pivot == -1) {
+            Array.Reverse(letters);
+            return string.Join("", letters);
         }
 
         return string.Empty;
