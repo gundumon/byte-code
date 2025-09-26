@@ -10,5 +10,12 @@ public class LexicographicalSequence {
     */
     public static string NextSequence(string input) {
         var letters = input.ToArray();
+        var pivot = letters.Length - 2;
+
+        while ((pivot >= 0) && letters[pivot] >= letters[pivot + 1]) {
+            pivot -= 1;
+        }
+
+        return string.Empty;
     }
 }
