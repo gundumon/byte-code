@@ -24,6 +24,12 @@ public class LexicographicalSequence {
             return string.Join("", letters);
         }
 
+        // find the rightmost successor to the pivot
+        var rightmost_successor = letters.Length - 1;
+        while (letters[rightmost_successor] <= letters[pivot]) {
+            rightmost_successor -= 1;
+        }
+
         return string.Empty;
     }
 }
