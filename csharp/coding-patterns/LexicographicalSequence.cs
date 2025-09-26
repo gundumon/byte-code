@@ -30,6 +30,13 @@ public class LexicographicalSequence {
             rightmost_successor -= 1;
         }
 
-        return string.Empty;
+        // swap the rightmost successor with the pivot to increase the lexicographical order of the suffix
+        (letters[pivot], letters[rightmost_successor]) = (letters[rightmost_successor], letters[pivot]);
+
+        // rever the suffix after the pivot to minimize its permutation
+        var temp = pivot + 1;
+        letters[temp..].Reverse();
+
+        return string.Join("", letters);
     }
 }
