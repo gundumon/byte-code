@@ -9,6 +9,6 @@ public class LexicographicalSequence {
         Output: "abdc"
     */
     public static string NextSequence(string input) {
-
+        var letters = input.ToArray();
     }
 }
