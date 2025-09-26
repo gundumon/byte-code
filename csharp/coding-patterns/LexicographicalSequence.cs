@@ -35,7 +35,7 @@ public class LexicographicalSequence {
 
         // rever the suffix after the pivot to minimize its permutation
         var temp = pivot + 1;
-        letters[temp..].Reverse();
+        letters.AsSpan(temp).Reverse();
 
         return string.Join("", letters);
     }
