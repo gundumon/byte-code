@@ -1,4 +1,4 @@
-﻿namespace CodingPatterns {
-    internal class UnsortedPairSum {
-    }
+﻿namespace CodingPatterns;
+
+public class UnsortedPairSum {
 }
