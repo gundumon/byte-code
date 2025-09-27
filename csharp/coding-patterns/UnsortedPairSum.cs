@@ -8,4 +8,7 @@ Example:
     Output: [0, 2]
 */
 public class UnsortedPairSum {
+    public static int[] FindPairs(int[] nums, int target) {
+        return [];
+    }
 }
