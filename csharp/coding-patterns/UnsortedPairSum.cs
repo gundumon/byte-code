@@ -18,6 +18,8 @@ public class UnsortedPairSum {
             if (hashmap.ContainsKey(target - x)) {
                 return [i, hashmap[target - x]];
             }
+
+            hashmap[x] = i;
         }
 
         return [];
