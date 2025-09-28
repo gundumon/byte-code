@@ -13,5 +13,10 @@ public class SudokuBoard {
         List<HashSet<int>> row_sets = [];
         List<HashSet<int>> column_sets = [];
         HashSet<int>[][] subgrid_sets = new HashSet<int>[3][3];
+
+        for(int i = 0; i < 9; i++) {
+            row_sets.Add(new HashSet<int>());
+            column_sets.Add(new HashSet<int>());
+        }
     }
 }
