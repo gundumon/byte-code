@@ -9,7 +9,9 @@ Constraings:
     - Assume each integer on the board falls in the range of [0, 9]
 */
 public class SudokuBoard {
-    public static void Verify() {
-
+    public static bool Verify(List<List<int>> nums) {
+        List<HashSet<int>> row_sets = [];
+        List<HashSet<int>> column_sets = [];
+        HashSet<int>[][] subgrid_sets = new HashSet<int>[3][3];
     }
 }
