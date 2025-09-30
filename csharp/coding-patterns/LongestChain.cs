@@ -8,4 +8,7 @@ Example:
     Output: 4 (The longest chain of consecutive numbers is 5, 6, 7, 8)
 */
 public class LongestChain {
+    public static int FindChain(List<int> nums) {
+        return 0;
+    }
 }
