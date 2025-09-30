@@ -9,6 +9,16 @@ Example:
 */
 public class LongestChain {
     public static int FindChain(List<int> nums) {
-        return 0;
+        int longestChain = 0;
+        HashSet<int> numSet = [.. nums];
+
+        foreach(var num in numSet) {
+            if (!numSet.Contains(num - 1)) {
+                int currentNum = num;
+                int currentChain = 1;
+            }
+        }
+
+        return longestChain;
     }
 }
