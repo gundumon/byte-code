@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace CodingPatterns;
 
-namespace CodingPatterns {
-    internal class GeometricSequence {
-    }
+public class GeometricSequence {
 }
