@@ -16,7 +16,7 @@ public class GeometricSequence {
 
         // populate the right dictionary with the frequency of each element in the array
         foreach (var num in nums) {
-            rightDict.Add(num, rightDict.GetValueOrDefault(num, 0) + 1);
+            rightDict[num] = rightDict.GetValueOrDefault(num, 0) + 1;
         }
 
         // search for geometric triplets that have 'num' as the center
@@ -30,7 +30,7 @@ public class GeometricSequence {
 
             // increment the frequency of 'num' in the left dictionary since it will be part of the
             // left side of the array once we iterate to the next value
-            leftDict.Add(num, leftDict.GetValueOrDefault(num, 0) + 1);
+            leftDict[num] = leftDict.GetValueOrDefault(num, 0) + 1;
         }
 
         return count;
