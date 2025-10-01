@@ -10,6 +10,12 @@ Example:
 */
 public class GeometricSequence {
     public static int FindTriplets(List<int> nums, int commonRation) {
-        return 0;
+        Dictionary<int, int> leftDict = [];
+        Dictionary<int, int> rightDict = [];
+        int count = 0;
+
+        foreach(var num in nums) {
+            rightDict.Add(num, rightDict.GetValueOrDefault(num, 0) + 1);
+        }
     }
 }
