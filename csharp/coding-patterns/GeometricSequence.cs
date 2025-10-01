@@ -15,20 +15,24 @@ public class GeometricSequence {
         int count = 0;
 
         // populate the right dictionary with the frequency of each element in the array
-        foreach(var num in nums) {
+        foreach (var num in nums) {
             rightDict.Add(num, rightDict.GetValueOrDefault(num, 0) + 1);
         }
 
-        // search for geometric triplets that have x as the center
-        foreach(var num in nums) {
-            // decrement the frequency of num in right dictionary since num is now being processed and is no loger to the right
+        // search for geometric triplets that have 'num' as the center
+        foreach (var num in nums) {
+            // decrement the frequency of 'num' in right dictionary since 'num' is now being processed and is no loger to the right
             rightDict[num] = rightDict[num] - 1;
 
             if (num % ratio == 0) {
                 count += leftDict.GetValueOrDefault(num / ratio, 0) * rightDict.GetValueOrDefault(num * ratio, 0);
             }
 
+            // increment the frequency of 'num' in the left dictionary since it will be part of the
+            // left side of the array once we iterate to the next value
             leftDict.Add(num, leftDict.GetValueOrDefault(num, 0) + 1);
         }
+
+        return count;
     }
 }
