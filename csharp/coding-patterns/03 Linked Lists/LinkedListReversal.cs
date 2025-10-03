@@ -30,5 +30,10 @@ public class LinkedListReversal {
         // recursively reverse the sublist starting at the next node
         var new_head = ReverseRecursive(head.Next);
 
+        // connect the reversed sublist to the head node to fully reverse the entire linked list
+        head.Next.Next = head;
+        head.Next = null;
+
+        return new_head;
     }
 }
