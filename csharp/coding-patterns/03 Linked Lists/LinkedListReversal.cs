@@ -20,4 +20,10 @@ public class LinkedListReversal {
         // 'prevNode' will be pointing at the head of the reversed linked list
         return prevNode;
     }
+
+    public static ListNode<int>? ReverseRecursive(ListNode<int> head) {
+        if (head is null || head.Next is null) {
+            return head;
+        }
+    }
 }
