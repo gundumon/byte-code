@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace CodingPatterns;
 
-namespace CodingPatterns._03_Linked_Lists {
-    internal class KthLastNode {
+public class KthLastNode {
+    public static void Remove() {
+
     }
 }
