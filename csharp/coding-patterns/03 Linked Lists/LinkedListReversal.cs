@@ -22,8 +22,13 @@ public class LinkedListReversal {
     }
 
     public static ListNode<int>? ReverseRecursive(ListNode<int> head) {
+        // base cases
         if (head is null || head.Next is null) {
             return head;
         }
+
+        // recursively reverse the sublist starting at the next node
+        var new_head = ReverseRecursive(head.Next);
+
     }
 }
