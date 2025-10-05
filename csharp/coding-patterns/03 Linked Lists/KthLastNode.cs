@@ -7,7 +7,7 @@ Constraint:
     The linked list contains at least one node
 */
 public class KthLastNode {
-    public static void Remove() {
+    public ListNode<int> Remove(ListNode<int> head, int k) {
 
     }
 }
