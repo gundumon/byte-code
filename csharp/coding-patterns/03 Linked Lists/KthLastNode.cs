@@ -1,5 +1,8 @@
-﻿namespace CodingPatterns;
+namespace CodingPatterns;
 
+/*
+
+*/
 public class KthLastNode {
     /*
     Return the head of a singly linked list after removing the kth node from the end of it
