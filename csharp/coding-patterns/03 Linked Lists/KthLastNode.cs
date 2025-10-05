@@ -30,6 +30,8 @@ public class KthLastNode {
         }
 
         // remove the kth node from the end
+        trailer.Next = trailer.Next.Next;
 
+        return dummy.Next;
     }
 }
