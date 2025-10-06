@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace CodingPatterns;
 
-namespace CodingPatterns._03_Linked_Lists {
-    internal class LinkedListIntersection {
-    }
+public class LinkedListIntersection {
+
 }
