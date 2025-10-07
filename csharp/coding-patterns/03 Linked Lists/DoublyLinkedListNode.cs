@@ -1,4 +1,4 @@
-﻿namespace CodingPatterns._03_Linked_Lists {
-    internal class DoublyLinkedListNode {
-    }
+﻿namespace CodingPatterns;
+
+public class DoublyLinkedListNode {
 }
