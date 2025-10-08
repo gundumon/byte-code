@@ -8,6 +8,7 @@ Design and implement a data structure for the Least Recently Used (LRU) cache th
 
 Constraints:
     1. All keys and values are positive integers
+    2. The cache capacity is positive
 */
 public class LRUCache {
 
