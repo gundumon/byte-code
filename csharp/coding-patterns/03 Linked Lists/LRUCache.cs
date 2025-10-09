@@ -11,5 +11,8 @@ Constraints:
     2. The cache capacity is positive
 */
 public class LRUCache {
-
+    private int capacity;
+    private Dictionary<int, DoublyLinkedListNode<int>> hashMap = [];
+    private DoublyLinkedListNode<int> head = new(-1, -1);
+    private DoublyLinkedListNode<int> tail = new(-1, -1);
 }
