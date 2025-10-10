@@ -35,7 +35,9 @@ public class LRUCache {
     }
 
     public void Put(int key, int value) {
-        //
+        if (hashMap.ContainsKey(key)) {
+            RemoveNode(hashMap[key]);
+        }
     }
 
     public void AddToTail(DoublyLinkedListNode<int> node) {
