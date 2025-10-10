@@ -26,5 +26,15 @@ public class LRUCache {
         if (!hashMap.ContainsKey(key)) {
             return -1;
         }
+
+        var node = hashMap[key];
+        RemoveNode(node);
+        AddToTail(node);
+
+        return node.Value;
+    }
+
+    public void RemoveNode(DoublyLinkedListNode<int> node) {
+        //
     }
 }
