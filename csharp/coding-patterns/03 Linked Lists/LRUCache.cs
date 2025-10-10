@@ -38,6 +38,17 @@ public class LRUCache {
         if (hashMap.ContainsKey(key)) {
             RemoveNode(hashMap[key]);
         }
+
+        var node = new DoublyLinkedListNode<int>(key, value);
+        hashMap[key] = node;
+
+        if (hashMap.Count > maxCapacity) {
+            var lru = head.Next;
+            hashMap.Remove(lru.Key);
+            RemoveNode(lru);
+        }
+
+        AddToTail(node);
     }
 
     public void AddToTail(DoublyLinkedListNode<int> node) {
