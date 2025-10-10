@@ -35,6 +35,7 @@ public class LRUCache {
     }
 
     public void RemoveNode(DoublyLinkedListNode<int> node) {
-        //
+        node.Prev.Next = node.Next;
+        node.Next.Prev = node.Prev;
     }
 }
