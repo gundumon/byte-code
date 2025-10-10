@@ -34,6 +34,16 @@ public class LRUCache {
         return node.Value;
     }
 
+    public void AddToTail(DoublyLinkedListNode<int> node) {
+        var prevNode = tail.Prev;
+
+        node.Prev = prevNode;
+        node.Next = tail;
+
+        prevNode.Next = node;
+        tail.Prev = node;
+    }
+
     public void RemoveNode(DoublyLinkedListNode<int> node) {
         node.Prev.Next = node.Next;
         node.Next.Prev = node.Prev;
