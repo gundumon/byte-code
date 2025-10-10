@@ -10,13 +10,21 @@ Constraints:
     1. All keys and values are positive integers
     2. The cache capacity is positive
 */
-public class LRUCache(int capacity) {
-    private readonly int capacity = capacity;
+public class LRUCache {
+    private readonly int maxCapacity;
     private Dictionary<int, DoublyLinkedListNode<int>> hashMap = [];
     private DoublyLinkedListNode<int> head = new(-1, -1);
     private DoublyLinkedListNode<int> tail = new(-1, -1);
 
-    public LRUCache() {
-        
+    public LRUCache(int capacity) {
+        maxCapacity = capacity;
+        head.Next = tail;
+        tail.Prev = head;
+    }
+
+    public int Get(int key) {
+        if (!hashMap.ContainsKey(key)) {
+            return -1;
+        }
     }
 }
