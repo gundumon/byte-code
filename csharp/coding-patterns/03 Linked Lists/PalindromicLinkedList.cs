@@ -1,4 +1,5 @@
-﻿namespace CodingPatterns._03_Linked_Lists;
+﻿namespace CodingPatterns;
 
-internal class PalindromicLinkedList {
+public class PalindromicLinkedList {
+    //
 }
