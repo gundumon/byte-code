@@ -1,4 +1,4 @@
 ﻿namespace CodingPatterns;
 
-internal class LinkedListMidpoint {
+public class LinkedListMidpoint {
 }
