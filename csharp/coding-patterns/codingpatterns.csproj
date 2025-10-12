@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="04 Fast and Slow Pointers\" />
+  </ItemGroup>
+
 </Project>
