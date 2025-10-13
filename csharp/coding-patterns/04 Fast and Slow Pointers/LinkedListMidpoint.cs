@@ -8,4 +8,7 @@ Constraints:
     2. The linked list contains unique values
 */
 public class LinkedListMidpoint {
+    public LinkedListNode<int> Find(LinkedListNode<int> head) {
+
+    }
 }
