@@ -9,6 +9,12 @@ Constraints:
 */
 public class LinkedListMidpoint {
     public LinkedListNode<int> Find(LinkedListNode<int> head) {
+        LinkedListNode<int>? fast = head;
+        LinkedListNode<int>? slow = head;
 
+        while (fast != null && fast.Next != null) {
+            slow = slow.Next;
+            fast = fast.Next.Next;
+        }
     }
 }
