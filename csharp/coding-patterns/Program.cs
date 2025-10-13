@@ -1,8 +1,10 @@
-﻿LinkedListNode<int> a = new(1);
-LinkedListNode<int> b = new(2);
-LinkedListNode<int> c = new(4);
-LinkedListNode<int> d = new(7);
-LinkedListNode<int> e = new(3);
+﻿using CodingPatterns;
+
+ListNode<int> a = new(1);
+ListNode<int> b = new(2);
+ListNode<int> c = new(4);
+ListNode<int> d = new(7);
+ListNode<int> e = new(3);
 
 a.Next = b;
 b.Next = c;

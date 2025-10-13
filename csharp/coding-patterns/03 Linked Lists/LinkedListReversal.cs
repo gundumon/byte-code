@@ -4,9 +4,9 @@
 Reverse a singly linked list
 */
 public class LinkedListReversal {
-    public static LinkedListNode<int>? Reverse(LinkedListNode<int> head) {
-        LinkedListNode<int>? currNode = head;
-        LinkedListNode<int>? prevNode = null;
+    public static ListNode<int>? Reverse(ListNode<int> head) {
+        ListNode<int>? currNode = head;
+        ListNode<int>? prevNode = null;
         
         // reverse the direction of each node's pointer until 'currNode' is null
         while (currNode != null) {
@@ -21,7 +21,7 @@ public class LinkedListReversal {
         return prevNode;
     }
 
-    public static LinkedListNode<int>? ReverseRecursive(LinkedListNode<int> head) {
+    public static ListNode<int>? ReverseRecursive(ListNode<int> head) {
         // base cases
         if (head is null || head.Next is null) {
             return head;

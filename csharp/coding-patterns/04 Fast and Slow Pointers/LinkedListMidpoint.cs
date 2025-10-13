@@ -8,9 +8,9 @@ Constraints:
     2. The linked list contains unique values
 */
 public class LinkedListMidpoint {
-    public LinkedListNode<int>? Find(LinkedListNode<int> head) {
-        LinkedListNode<int>? fast = head;
-        LinkedListNode<int>? slow = head;
+    public ListNode<int>? Find(ListNode<int> head) {
+        ListNode<int>? fast = head;
+        ListNode<int>? slow = head;
 
         while (fast != null && fast.Next != null) {
             slow = slow?.Next;
