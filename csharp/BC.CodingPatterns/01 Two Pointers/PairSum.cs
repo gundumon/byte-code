@@ -9,6 +9,10 @@ Example:
     output: [2, 3]
 */
 public class PairSum {
+    public static List<Tuple<int, int>> FindIndexes(int[] num, int target) {
+
+    }
+
     public static List<int> FindPair(int[] nums, int target) {
         var left = 0;
         var right = nums.Length - 1;
