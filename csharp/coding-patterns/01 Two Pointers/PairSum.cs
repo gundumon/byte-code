@@ -8,7 +8,7 @@ Example:
     int target = 7
     output: [2, 3]
 */
-public class SortedPairSum {
+public class PairSum {
     public static List<int> FindPair(int[] nums, int target) {
         var left = 0;
         var right = nums.Length - 1;
