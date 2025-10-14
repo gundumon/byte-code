@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/src/" />
+  <Folder Name="/src/">
+    <Project Path="src/BC.ConsoleApp/BC.ConsoleApp.csproj" Id="c6bbee9d-6c5d-49f1-8042-292b5c0ed75f" />
+  </Folder>
   <Folder Name="/src/BC.CodingPatterns/">
     <Project Path="src/BC.CodingPatterns/BC.CodingPatterns.csproj" />
   </Folder>
