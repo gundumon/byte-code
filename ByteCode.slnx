@@ -1,7 +1,7 @@
 <Solution>
-  <Folder Name="/csharp/" />
-  <Folder Name="/csharp/BC.CodingPatterns/">
-    <Project Path="csharp/BC.CodingPatterns/BC.CodingPatterns.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/BC.CodingPatterns/">
+    <Project Path="src/BC.CodingPatterns/BC.CodingPatterns.csproj" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
