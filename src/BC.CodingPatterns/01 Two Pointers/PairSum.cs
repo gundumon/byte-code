@@ -9,7 +9,7 @@ Example:
     output: [2, 3]
 */
 public class PairSum {
-    public static List<Tuple<int, int>> FindIndexes(int[] num, int target) {
+    public static (int num1, int num2) FindAnyPair(int[] nums, int target) {
 
     }
 
