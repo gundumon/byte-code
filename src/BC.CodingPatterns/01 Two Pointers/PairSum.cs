@@ -9,17 +9,19 @@ Example:
     output: [2, 3]
 */
 public class PairSum {
-    public static (int num1, int num2)? FindAnyPair(int[] nums, int target) {
+    public static List<int[]> FindAnyPair(int[] nums, int target) {
         if (nums == null || nums.Length < 2)
-            return null;
+            return [];
 
+        List<int[]> result = [];
         int leftPtr = 0;
-        int rightPtr = 0;
+        int rightPtr = nums.Length - 1;
 
         while (leftPtr < rightPtr) {
             var sum = nums[leftPtr] + nums[rightPtr];
             if (sum == target) {
-                return (leftPtr, rightPtr);
+                result.Add([leftPtr, rightPtr]);
+                break;
             }
             else if (sum < target) {
                 leftPtr += 1;
@@ -29,7 +31,7 @@ public class PairSum {
             }
         }
 
-        return null;
+        return result;
     }
 
     public static List<int> FindPair(int[] nums, int target) {
