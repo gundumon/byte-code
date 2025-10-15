@@ -9,8 +9,12 @@ Example:
     output: [2, 3]
 */
 public class PairSum {
-    public static (int num1, int num2) FindAnyPair(int[] nums, int target) {
+    public static (int num1, int num2)? FindAnyPair(int[] nums, int target) {
+        if (nums == null || nums.Length < 2)
+            return null;
 
+        int leftPtr = 0;
+        int rightPtr = 0;
     }
 
     public static List<int> FindPair(int[] nums, int target) {
