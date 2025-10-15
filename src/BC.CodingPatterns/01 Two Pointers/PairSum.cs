@@ -33,24 +33,4 @@ public class PairSum {
 
         return result;
     }
-
-    public static List<int> FindPair(int[] nums, int target) {
-        var left = 0;
-        var right = nums.Length - 1;
-
-        while (left < right) {
-            var sum = nums[left] + nums[right];
-
-            // if the sum is smaller, increment the left pointer to increase the sum
-            if (sum < target)
-                left += 1;
-            // if the sum is larger, decrement the right pointer to decrease the sum
-            else if (sum > target)
-                right -= 1;
-            else
-                return [left, right];
-        }
-
-        return [];
-    }
 }
