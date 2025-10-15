@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BC.CodingPatterns\BC.CodingPatterns.csproj" />
+  </ItemGroup>
+
 </Project>
