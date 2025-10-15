@@ -15,6 +15,21 @@ public class PairSum {
 
         int leftPtr = 0;
         int rightPtr = 0;
+
+        while (leftPtr < rightPtr) {
+            var sum = nums[leftPtr] + nums[rightPtr];
+            if (sum == target) {
+                return (leftPtr, rightPtr);
+            }
+            else if (sum < target) {
+                leftPtr += 1;
+            }
+            else {
+                rightPtr -= 1;
+            }
+        }
+
+        return null;
     }
 
     public static List<int> FindPair(int[] nums, int target) {
