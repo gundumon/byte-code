@@ -7,7 +7,7 @@ Example:
     Input: [0, -1, 2, -3, 1]
     Output: [[-3, 1, 2], [-1, 0, 1]]
 */
-public class TripleSum {
+public class TripletSum {
     public static HashSet<Tuple<int, int, int>> FindAllTriplets(int[] nums) {
         var triplets = new HashSet<Tuple<int, int, int>>();
         Array.Sort(nums);
