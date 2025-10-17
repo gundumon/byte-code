@@ -24,30 +24,4 @@ public class TripletSum {
 
         return triplets;
     }
-
-    public static HashSet<Tuple<int, int>> FindPairs(int[] nums, int target) {
-        var pairs = new HashSet<Tuple<int, int>>();
-        var left = 0;
-        var right = nums.Length - 1;
-
-        while (left < right) {
-            var sum = nums[left] + nums[right];
-
-            // if the sum is smaller, increment the left pointer to increase the sum
-            if (sum < target) {
-                left += 1;
-            }
-            // if the sum is larger, decrement the right pointer to decrease the sum
-            else if (sum > target) {
-                right -= 1;
-            }
-            else {
-                pairs.Add(Tuple.Create(nums[left], nums[right]));
-                left += 1;
-                right -= 1;
-            }
-        }
-
-        return pairs;
-    }
 }
