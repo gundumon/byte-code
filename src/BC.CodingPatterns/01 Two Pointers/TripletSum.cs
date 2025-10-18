@@ -5,7 +5,7 @@ Given an array of integers, return all triplets [a, b, c] such that a + b + c = 
 */
 public class TripletSum {
     public static HashSet<(int a, int b, int c)> FindAllTriplets(int[] nums) {
-        var triplets = new HashSet<Tuple<int, int, int>>();
+        var triplets = new HashSet<(int a, int b, int c)>();
         Array.Sort(nums);
 
         var targetIndex = 0;
