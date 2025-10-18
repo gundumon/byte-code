@@ -16,8 +16,9 @@ public class TripletSum {
             
             var pairs = PairSum.FindAllPairs(temp, target * -1);
 
-            foreach (var pair in pairs)
-                triplets.Add(Tuple.Create(target, pair[0], pair[1]));
+            foreach (var pair in pairs) {
+                triplets.Add((target, pair[0], pair[1]));
+            }
 
             targetIndex += 1;
             while ((targetIndex < nums.Length) && (nums[targetIndex] == target))
