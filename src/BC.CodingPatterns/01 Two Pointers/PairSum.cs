@@ -8,14 +8,14 @@ public class PairSum {
         if (nums == null || nums.Length < 2)
             return [];
 
-        List<int[]> result = [];
+        List<(int, int)> result = [];
         int leftPtr = 0;
         int rightPtr = nums.Length - 1;
 
         while (leftPtr < rightPtr) {
             var sum = nums[leftPtr] + nums[rightPtr];
             if (sum == target) {
-                result.Add([leftPtr, rightPtr]);
+                result.Add((leftPtr, rightPtr));
                 break;
             }
             else if (sum < target) {
