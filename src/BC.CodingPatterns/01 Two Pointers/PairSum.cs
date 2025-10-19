@@ -29,11 +29,11 @@ public class PairSum {
         return result;
     }
 
-    public static List<int[]> FindAllPairs(int[] nums, int target) {
+    public static List<(int a, int b)> FindAllPairs(int[] nums, int target) {
         if (nums == null || nums.Length < 2)
             return [];
 
-        List<int[]> result = [];
+        List<(int, int)> result = [];
         int leftPtr = 0;
         int rightPtr = nums.Length - 1;
 
