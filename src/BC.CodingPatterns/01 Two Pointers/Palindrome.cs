@@ -2,10 +2,6 @@ namespace CodingPatterns;
 
 /*
 Given a string, determine if it's a palindrome after removing all non-alphanumeric characters. A character is alphanumeric if it's either a letter or a number.
-
-Example:
-    Input: 'a dog! a panic in a pagoda.'
-    Output: True
 */
 public class Palindrome {
     public static bool IsValid(string input) {
@@ -13,17 +9,14 @@ public class Palindrome {
         var right = input.Length - 1;
 
         while (left < right) {
-            // skip non-alphanumeric characters from the left
             while ((left < right) && !char.IsLetterOrDigit(input[left])) {
                 left += 1;
             }
 
-            // skip non-alphanumeric characters from the right
             while ((left < right) && !char.IsLetterOrDigit(input[right])) {
                 right -= 1;
             }
 
-            // if the characters at the left and right pointers do not match, the string is not a palindrome
             if (input[left] != input[right])
                 return false;
 
