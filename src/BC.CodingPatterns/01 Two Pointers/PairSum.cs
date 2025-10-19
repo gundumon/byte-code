@@ -49,7 +49,7 @@ public class PairSum {
 
                     for (var i = 0; i < count; i ++) {
                         for (var j = i + 1; j < count; j++) {
-                            result.Add([leftPtr + i, leftPtr + j]);
+                            result.Add((leftPtr + i, leftPtr + j));
                         }
                     }
                 }
@@ -72,7 +72,7 @@ public class PairSum {
 
                     for (int i = 0; i < countL; i++) {
                         for (int j = 0; j < countR; j++) {
-                            result.Add([leftPtr + i, rightPtr - j]);
+                            result.Add((leftPtr + i, rightPtr - j));
                         }
                     }
 
