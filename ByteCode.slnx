@@ -1,11 +1,11 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/BC.CodingPatterns/BC.CodingPatterns.csproj" />
-    <Project Path="src/BC.ConsoleApp/BC.ConsoleApp.csproj" Id="c6bbee9d-6c5d-49f1-8042-292b5c0ed75f" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/tests/" />
 </Solution>
