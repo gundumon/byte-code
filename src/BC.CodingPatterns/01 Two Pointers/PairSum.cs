@@ -8,25 +8,23 @@ public class PairSum {
         if (nums == null || nums.Length < 2)
             return null;
 
-        List<(int, int)> result = [];
-        int leftPtr = 0;
-        int rightPtr = nums.Length - 1;
+        int left = 0;
+        int right = nums.Length - 1;
 
-        while (leftPtr < rightPtr) {
-            var sum = nums[leftPtr] + nums[rightPtr];
+        while (left < right) {
+            var sum = nums[left] + nums[right];
             if (sum == target) {
-                result.Add((leftPtr, rightPtr));
-                break;
+                return (left, right);
             }
             else if (sum < target) {
-                leftPtr += 1;
+                left += 1;
             }
             else {
-                rightPtr -= 1;
+                right -= 1;
             }
         }
 
-        return result;
+        return null;
     }
 
     public static List<(int a, int b)> FindAllPairs(int[] nums, int target) {
