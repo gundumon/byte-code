@@ -32,57 +32,57 @@ public class PairSum {
             return [];
 
         List<(int, int)> result = [];
-        int leftPtr = 0;
-        int rightPtr = nums.Length - 1;
+        int left = 0;
+        int right = nums.Length - 1;
 
-        while (leftPtr < rightPtr) {
-            var sum = nums[leftPtr] + nums[rightPtr];
+        while (left < right) {
+            var sum = nums[left] + nums[right];
 
             if (sum == target) {
-                int leftNum = nums[leftPtr];
-                int rightNum = nums[rightPtr];
+                int leftNum = nums[left];
+                int rightNum = nums[right];
 
                 if (leftNum == rightNum) {
-                    var count = rightPtr - leftPtr + 1;
+                    var count = right - left + 1;
 
                     for (var i = 0; i < count; i ++) {
                         for (var j = i + 1; j < count; j++) {
-                            result.Add((leftPtr + i, leftPtr + j));
+                            result.Add((left + i, left + j));
                         }
                     }
                 }
                 else {
-                    int tempL = leftPtr;
+                    int tempL = left;
 
-                    while (tempL < rightPtr && nums[tempL] == leftNum) {
+                    while (tempL < right && nums[tempL] == leftNum) {
                         tempL++;
                     }
 
-                    int countL = tempL - leftPtr;
+                    int countL = tempL - left;
 
-                    int tempR = rightPtr;
+                    int tempR = right;
 
-                    while (tempR > leftPtr && nums[tempR] == rightNum) {
+                    while (tempR > left && nums[tempR] == rightNum) {
                         tempR--;
                     }
 
-                    int countR = rightPtr - tempR;
+                    int countR = right - tempR;
 
                     for (int i = 0; i < countL; i++) {
                         for (int j = 0; j < countR; j++) {
-                            result.Add((leftPtr + i, rightPtr - j));
+                            result.Add((left + i, right - j));
                         }
                     }
 
-                    leftPtr = tempL;
-                    rightPtr = tempR;
+                    left = tempL;
+                    right = tempR;
                 }
             }
             else if (sum < target) {
-                leftPtr += 1;
+                left += 1;
             }
             else {
-                rightPtr -= 1;
+                right -= 1;
             }
         }
 
