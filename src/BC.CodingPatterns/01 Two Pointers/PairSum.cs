@@ -15,7 +15,7 @@ public class PairSum {
             var sum = nums[left] + nums[right];
 
             if (sum == target) {
-                return (left, right);
+                return (nums[left], nums[right]);
             }
             else if (sum < target) {
                 left += 1;
