@@ -13,6 +13,7 @@ public class PairSum {
 
         while (left < right) {
             var sum = nums[left] + nums[right];
+
             if (sum == target) {
                 return (left, right);
             }
