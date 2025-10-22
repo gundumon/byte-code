@@ -2,7 +2,7 @@
 
 public class PairSumTests {
     [Fact]
-    public void Test1() {
+    public void FindAnyPair_EmptyInput_ReturnsNull() {
 
     }
 }
