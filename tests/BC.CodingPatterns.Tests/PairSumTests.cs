@@ -12,4 +12,14 @@ public class PairSumTests {
 
         Assert.Null(result);
     }
+
+    [Fact]
+    public void FindAnyPair_InputLengthLessThanTwo_ReturnsNull() {
+        int[] nums = [1];
+        int target = 5;
+
+        (int, int)? result = PairSum.FindAnyPair(nums, target);
+
+        Assert.Null(result);
+    }
 }
