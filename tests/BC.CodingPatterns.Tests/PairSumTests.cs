@@ -76,4 +76,16 @@ public class PairSumTests {
         Assert.NotNull(result);
         Assert.Empty(result);
     }
+
+    [Fact]
+    public void FindAllPairs_OneMatchingPair_ReturnsPair() {
+        int[] nums = [1, 2, 3, 5];
+        int target = 5;
+
+        List<(int, int)> result = PairSum.FindAllPairs(nums, target);
+
+        Assert.NotNull(result);
+        Assert.NotEmpty(result);
+        Assert.Single(result);
+    }
 }
