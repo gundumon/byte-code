@@ -65,4 +65,15 @@ public class PairSumTests {
         Assert.NotNull(result);
         Assert.NotEmpty(result);
     }
+
+    [Fact]
+    public void FindAllPairs_InputLengthLessThamTwo_ReturnsEmpty() {
+        int[] nums = [];
+        int target = 5;
+
+        List<(int, int)> result = PairSum.FindAllPairs(nums, target);
+
+        Assert.NotNull(result);
+        Assert.NotEmpty(result);
+    }
 }
