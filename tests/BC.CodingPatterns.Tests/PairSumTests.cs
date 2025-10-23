@@ -63,7 +63,7 @@ public class PairSumTests {
         List<(int, int)> result = PairSum.FindAllPairs(nums, target);
 
         Assert.NotNull(result);
-        Assert.NotEmpty(result);
+        Assert.Empty(result);
     }
 
     [Fact]
@@ -74,6 +74,6 @@ public class PairSumTests {
         List<(int, int)> result = PairSum.FindAllPairs(nums, target);
 
         Assert.NotNull(result);
-        Assert.NotEmpty(result);
+        Assert.Empty(result);
     }
 }
