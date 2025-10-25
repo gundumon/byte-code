@@ -73,7 +73,7 @@ public class PairSum {
 
                     for (int i = 0; i < countL; i++) {
                         for (int j = 0; j < countR; j++) {
-                            result.Add((left + i, right - j));
+                            result.Add((nums[left + i], nums[right - j]));
                         }
                     }
 
