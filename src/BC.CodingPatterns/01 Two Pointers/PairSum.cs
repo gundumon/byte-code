@@ -48,9 +48,11 @@ public class PairSum {
 
                     for (var i = 0; i < count; i ++) {
                         for (var j = i + 1; j < count; j++) {
-                            result.Add((left + i, left + j));
+                            result.Add((nums[left + i], nums[left + j]));
                         }
                     }
+
+                    left = right;
                 }
                 else {
                     int tempL = left;
