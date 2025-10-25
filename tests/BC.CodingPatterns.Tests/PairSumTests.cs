@@ -91,6 +91,7 @@ public class PairSumTests {
 
     [Theory]
     [InlineData([new int[] { 1, 1, 1 }, 2, 3])]
+    [InlineData([new int[] { -5, -2, 2, 3, 4, 5, 9 }, 7, 3])]
     public void FindAllPairs_MatchingPairs_ReturnsAllPairs(int[] nums, int target, int expectedCount) {
         List<(int, int)> result = PairSum.FindAllPairs(nums, target);
 
