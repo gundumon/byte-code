@@ -98,5 +98,6 @@ public class PairSumTests {
 
         Assert.NotEmpty(result);
         Assert.Equal(expectedCount, result.Count);
+        Assert.All(result, (x) => target.Equals(x.Item1 + x.Item2));
     }
 }
