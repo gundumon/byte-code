@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="00-Readme.md" />
+  </ItemGroup>
+
 </Project>
