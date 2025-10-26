@@ -1,6 +1,4 @@
-﻿using CodingPatterns;
-
-namespace BC.CodingPatterns.Tests;
+﻿namespace BC.CodingPatterns.Tests;
 
 public class PairSumTests {
     [Fact]

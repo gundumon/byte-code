@@ -1,4 +1,4 @@
-namespace CodingPatterns;
+namespace BC.CodingPatterns;
 
 /*
 Given an array of integers sorted in ascending order and a target value, return any / all pair of numbers in the array that sum to the target. If no pair is found, return an empty array.
