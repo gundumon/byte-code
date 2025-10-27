@@ -66,7 +66,7 @@ public class PairSumTests {
 
     [Fact]
     public void FindAllPairs_InputLengthLessThamTwo_ReturnsEmpty() {
-        int[] nums = [];
+        int[] nums = [3];
         int target = 5;
 
         List<(int, int)> result = PairSum.FindAllPairs(nums, target);
