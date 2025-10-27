@@ -65,7 +65,7 @@ public class PairSumTests {
     }
 
     [Fact]
-    public void FindAllPairs_InputLengthLessThamTwo_ReturnsEmpty() {
+    public void FindAllPairs_InputLengthLessThanTwo_ReturnsEmpty() {
         int[] nums = [3];
         int target = 5;
 
