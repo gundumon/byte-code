@@ -15,6 +15,11 @@ public class TripletSum {
         var targetIndex = 0;
         while (targetIndex < nums.Length) {
             var target = nums[targetIndex];
+
+            if (target > 0) {
+                break;
+            }
+
             var startIndex = targetIndex + 1;
             var temp = nums[startIndex..];
             
