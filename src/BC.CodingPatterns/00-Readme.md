@@ -9,3 +9,4 @@ A two-pointer algorithm usually requires a linear data structure, such as an arr
 
 ## Examples
 1. [Pair Sum Sorted](./01-PairSum.cs)
+1. [Triplet Sum](./02-TripletSum.cs)
