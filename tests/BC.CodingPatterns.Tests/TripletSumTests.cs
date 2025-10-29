@@ -34,6 +34,7 @@ public class TripletSumTests {
     [Theory]
     [InlineData([new int[] { 0, 0, 0 }, 1])]
     [InlineData([new int[] { -3, -1, 0, 1, 2 }, 2])]
+    [InlineData([new int[] { 0, 0, 1, -1, 1, -1 }, 1])]
     public void FindAllTriplets_MatchingPairs_ReturnsAllPairs(int[] nums, int expectedCount) {
         HashSet<(int a, int b, int c)> result = TripletSum.FindAllTriplets(nums);
 
