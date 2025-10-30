@@ -6,7 +6,7 @@ Given a string, determine if it's a palindrome after removing all non-alphanumer
 public class Palindrome {
     public static bool IsValid(string input) {
         if (string.IsNullOrEmpty(input)) {
-            return false;
+            return true;
         }
 
         var left = 0;
