@@ -1,4 +1,8 @@
-﻿namespace BC.CodingPatterns.Tests {
-    internal class PalindromeTests {
+﻿namespace BC.CodingPatterns.Tests;
+
+public class PalindromeTests {
+    [Fact]
+    public void IsValid_EmptyString_ReturnsTrue() {
+        string input = string.Empty;
     }
 }
