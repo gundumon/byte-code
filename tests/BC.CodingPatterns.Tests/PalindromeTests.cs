@@ -11,7 +11,10 @@ public class PalindromeTests {
     }
 
     [Theory]
-    public void IsValid_ValidString_ReturnsTrue() {
+    [InlineData(["a"])]
+    public void IsValid_ValidString_ReturnsTrue(string input) {
+        var isPalindrome = Palindrome.IsValid(input);
 
+        Assert.True(isPalindrome);
     }
 }
