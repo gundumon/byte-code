@@ -22,10 +22,9 @@ public class PalindromeTests {
     }
 
     [Theory]
-    [InlineData(["a"])]
-    [InlineData(["aa"])]
-    [InlineData(["!, (?)"])]
-    [InlineData(["12.02.2021"])]
+    [InlineData(["ab"])]
+    [InlineData(["21.02.2021"])]
+    [InlineData(["hello, world!"])]
     public void IsValid_ValidString_ReturnsFalse(string input) {
         var isPalindrome = Palindrome.IsValid(input);
 
