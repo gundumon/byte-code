@@ -9,4 +9,9 @@ public class PalindromeTests {
 
         Assert.True(isPalindrome);
     }
+
+    [Theory]
+    public void IsValid_ValidString_ReturnsTrue() {
+
+    }
 }
