@@ -10,7 +10,6 @@ public class LargestContainer {
         int right = heights.Length - 1;
 
         while (left < right) {
-            // calculate the water contained between the current pair of lines
             var water = Math.Min(heights[left], heights[right]) * (right - left);
             max_water = Math.Max(max_water, water);
 
