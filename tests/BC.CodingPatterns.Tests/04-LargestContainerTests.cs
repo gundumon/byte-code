@@ -12,6 +12,9 @@ public class LargestContainerTests {
 
     [Theory]
     [InlineData([new int[] { 0, 1, 0 }, 0])]
+    [InlineData([new int[] { 3, 3, 3, 3 }, 9])]
+    [InlineData([new int[] { 1, 2, 3 }, 2])]
+    [InlineData([new int[] { 3, 2, 1 }, 2])]
     public void Find_ValidHeights_ReturnsSizeOfLargestContainer(int[] heights, int expectedOutput) {
         var result = LargestContainer.Find(heights);
 
