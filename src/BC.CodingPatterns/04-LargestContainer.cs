@@ -5,6 +5,10 @@ You are given an array of numbers, each representing the height of a vertical li
 */
 public class LargestContainer {
     public static int Find(int[] heights) {
+        if (heights.Length < 2) {
+            return 0;
+        }
+
         int max_water = 0;
         int left = 0;
         int right = heights.Length - 1;
