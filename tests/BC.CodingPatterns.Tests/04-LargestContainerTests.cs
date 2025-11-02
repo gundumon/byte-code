@@ -10,7 +10,11 @@ public class LargestContainerTests {
         Assert.Equal(0, result);
     }
 
-    public void Find_ValidHeights_ReturnsSizeOfLargestContainer(int[] heights) {
+    [Theory]
+    [InlineData([new int[] { 0, 1, 0 }, 0])]
+    public void Find_ValidHeights_ReturnsSizeOfLargestContainer(int[] heights, int expectedOutput) {
+        var result = LargestContainer.Find(heights);
 
+        Assert.Equal(expectedOutput, result);
     }
 }
