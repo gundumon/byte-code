@@ -9,4 +9,9 @@ public class ShiftZeroTests {
 
         Assert.Empty(result);
     }
+
+    [Theory]
+    public void ShiftToEnd_ValidInput_ShiftsZerosToEnd() {
+
+    }
 }
