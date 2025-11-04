@@ -11,10 +11,11 @@ public class ShiftZeroTests {
     }
 
     [Theory]
-    [InlineData([new int[] {0}, new int[] {0}])]
+    [InlineData([new int[] { 0 }, new int[] { 0 }])]
+    [InlineData([new int[] { 1 }, new int[] { 1 }])]
     public void ShiftToEnd_ValidInput_ShiftsZerosToEnd(int[] nums, int[] expectedResult) {
         var result = ShiftZero.ShiftToEnd(nums);
 
-        Assert.True(Enumerable.SequenceEqual(expectedResult, result));
+        Assert.Equal(expectedResult, result);
     }
 }
