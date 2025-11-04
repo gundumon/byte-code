@@ -5,6 +5,10 @@ Given an array of integers, modify the array in place to move all zeros to the e
 */
 public class ShiftZero {
     public static int[] ShiftToEnd(int[] nums) {
+        if (nums.Length < 2) {
+            return nums;
+        }
+
         int left = 0;
         int right = 0;
 
