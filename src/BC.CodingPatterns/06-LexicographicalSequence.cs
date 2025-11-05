@@ -1,4 +1,4 @@
-﻿namespace CodingPatterns;
+﻿namespace BC.CodingPatterns;
 
 public class LexicographicalSequence {
     /*
