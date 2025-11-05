@@ -29,7 +29,7 @@ public class LexicographicalSequence {
         // swap the rightmost successor with the pivot to increase the lexicographical order of the suffix
         (letters[pivot], letters[rightmost_successor]) = (letters[rightmost_successor], letters[pivot]);
 
-        // rever the suffix after the pivot to minimize its permutation
+        // reverse the suffix after the pivot to minimize its permutation
         var temp = pivot + 1;
         letters.AsSpan(temp).Reverse();
 
