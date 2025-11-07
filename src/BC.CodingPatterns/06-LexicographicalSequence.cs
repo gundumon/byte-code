@@ -28,7 +28,7 @@ public class LexicographicalSequence {
             return string.Join("", input.Reverse());
         }
 
-        // find the rightmost successor to the pivot
+        // find the rightmost successor (larger character) to the pivot
         var rightmost_successor = letters.Length - 1;
         while (letters[rightmost_successor] <= letters[pivot]) {
             rightmost_successor -= 1;
