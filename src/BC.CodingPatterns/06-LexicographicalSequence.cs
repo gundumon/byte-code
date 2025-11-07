@@ -8,7 +8,7 @@ public class LexicographicalSequence {
       1. Locate the pivot
         - Pivot is the first character that breaks the incrceasing sequence from right of the string
         - If no pivot is found, the string is already at its last lexicographical sequence, and the result is just the reverse of the string
-      2. Find the rightmost successor (largest character) to the pivot
+      2. Find the rightmost successor (character larger than the pivot)
       3. Swap the rightmost successor with the pivot to increase the lexicographical order of the suffix
       4. Reverse the suffix after the pivot to minimize its permutation
     */
