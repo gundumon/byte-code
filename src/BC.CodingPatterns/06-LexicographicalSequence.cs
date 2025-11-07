@@ -8,7 +8,7 @@ public class LexicographicalSequence {
       1. Locate the pivot
         - Pivot is the first character that breaks the non-incrceasing sequence from right of the string
         - If no pivot is found, the string is already at its last lexicographical sequence, and the result is just the reverse of the string
-      2. Find the rightmost successor to the pivot
+      2. Find the rightmost successor (largest character) to the pivot
       3. Swap the rightmost successor with the pivot to increase the lexicographical order of the suffix
       4. Reverse the suffix after the pivot to minimize its permutation
     */
@@ -16,28 +16,22 @@ public class LexicographicalSequence {
         var letters = input.ToArray();
         var pivot = input.Length - 2;
 
-        // locate the first character from the right that breaks non-increasing order
         while ((pivot >= 0) && input[pivot] >= input[pivot + 1]) {
             pivot -= 1;
         }
 
-        // if pivot is not found, the string is already in its largest permutation
-        // reverse the string to obtain the smallest permutation
         if (pivot == -1) {
             //Array.Reverse(letters);
             return string.Join("", input.Reverse());
         }
 
-        // find the rightmost successor (larger character) to the pivot
         var rightmost_successor = letters.Length - 1;
         while (letters[rightmost_successor] <= letters[pivot]) {
             rightmost_successor -= 1;
         }
 
-        // swap the rightmost successor with the pivot to increase the lexicographical order of the suffix
         (letters[pivot], letters[rightmost_successor]) = (letters[rightmost_successor], letters[pivot]);
 
-        // reverse the suffix after the pivot to minimize its permutation
         var temp = pivot + 1;
         letters.AsSpan(temp).Reverse();
 
