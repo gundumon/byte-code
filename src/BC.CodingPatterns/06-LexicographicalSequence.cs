@@ -13,22 +13,23 @@ public class LexicographicalSequence {
       4. Reverse the suffix after the pivot to minimize its permutation
     */
     public static string NextSequence(string input) {
+        var letters = input.ToArray();
         var pivot = input.Length - 2;
 
-        while ((pivot >= 0) && input[pivot] >= input[pivot + 1]) {
+        while ((pivot >= 0) && letters[pivot] >= letters[pivot + 1]) {
             pivot -= 1;
         }
 
         if (pivot < 0) {
-            return string.Join("", input.Reverse());
+            return string.Join("", letters.Reverse());
         }
 
-        var rightmost_successor = letters.Length - 1;
-        while (letters[rightmost_successor] <= letters[pivot]) {
-            rightmost_successor -= 1;
+        var successor = letters.Length - 1;
+        while (letters[successor] <= letters[pivot]) {
+            successor -= 1;
         }
 
-        (letters[pivot], letters[rightmost_successor]) = (letters[rightmost_successor], letters[pivot]);
+        (letters[pivot], letters[successor]) = (letters[successor], letters[pivot]);
 
         var temp = pivot + 1;
         letters.AsSpan(temp).Reverse();
