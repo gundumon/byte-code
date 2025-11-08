@@ -13,7 +13,7 @@ public class LexicographicalSequence {
       4. Reverse the suffix after the pivot to minimize its permutation
     */
     public static string NextSequence(string input) {
-        if (string.IsNullOrWhiteSpace(input)) {
+        if (string.IsNullOrWhiteSpace(input) || input.Length < 3) {
             return input;
         }
 
