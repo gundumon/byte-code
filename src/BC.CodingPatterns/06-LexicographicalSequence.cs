@@ -13,6 +13,10 @@ public class LexicographicalSequence {
       4. Reverse the suffix after the pivot to minimize its permutation
     */
     public static string NextSequence(string input) {
+        if (string.IsNullOrWhiteSpace(input)) {
+            return input;
+        }
+
         var letters = input.ToArray();
         var pivot = input.Length - 2;
 

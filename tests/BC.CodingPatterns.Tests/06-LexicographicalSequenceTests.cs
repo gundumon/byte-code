@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace BC.CodingPatterns.Tests;
 
-namespace BC.CodingPatterns.Tests;
+public class LexicographicalSequenceTests {
+    [Fact]
 
-internal class _06_LexicographicalSequenceTests {
 }
