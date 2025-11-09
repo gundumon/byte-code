@@ -8,11 +8,14 @@ public class Result<T> {
 
     private Result(ErrorType error) {
         IsSuccess = false;
+        Error = error;
     }
 
     public bool IsSuccess { get; }
 
-    public T Value { get; }
+    public ErrorType Error { get; }
+
+    public T? Value { get; }
 
     public static Result<T> Success(T value) {
         return new(true) {
