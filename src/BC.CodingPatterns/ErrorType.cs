@@ -1,4 +1,4 @@
-﻿namespace BC.CodingPatterns {
-    internal class ErrorType {
-    }
+﻿namespace BC.CodingPatterns;
+
+public enum ErrorType {
 }
