@@ -9,6 +9,7 @@ public class Result<T> {
     private Result(ErrorType error) {
         IsSuccess = false;
         Error = error;
+        Value = default;
     }
 
     public bool IsSuccess { get; }
@@ -17,17 +18,7 @@ public class Result<T> {
 
     public T? Value { get; }
 
-    public static Result<T> Success(T value) {
-        return new(true) {
-            Value = value
-        };
-    }
+    public static Result<T> Success(T value) => new(value);
 
-    public static Result<T> Failure() => new(false)
-}
-
-public class Test {
-    public void Foo() {
-        var r = Result<int>.Success(12);
-    }
+    public static Result<T> Failure(ErrorType error) => new(error);
 }
