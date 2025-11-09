@@ -9,7 +9,7 @@ Example:
     Input: nums = [-1, 3, 4, 2], target = 3
     Output: [0, 2]
 */
-public class UnsortedPairSum {
+public class PairSumUnsorted {
     public static int[] FindPairs(int[] nums, int target) {
         Dictionary<int, int> hashmap = [];
 
