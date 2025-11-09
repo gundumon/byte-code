@@ -14,13 +14,14 @@ public class PairSumUnsorted {
 
         for(int i = 0; i < nums.Length; i++) {
             int x = nums[i];
+
             if (hashmap.ContainsKey(target - x)) {
-                return [i, hashmap[target - x]];
+                return (i, hashmap[target - x]);
             }
 
             hashmap[x] = i;
         }
 
-        return [];
+        return null;
     }
 }
