@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/BC.CodingPatterns/BC.CodingPatterns.csproj" />
+    <Project Path="src/BC.Helpers/BC.Helpers.csproj" Id="8c02219a-be8f-46d7-ace8-4ff04db700d7" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
