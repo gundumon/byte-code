@@ -6,9 +6,9 @@ Given an array of integers, return the indexes of any two numbers that add up to
 Constraint: The same index cannot be used twice in the result
 */
 public class PairSumUnsorted {
-    public static Result<(int a, int b)> FindPairs(int[] nums, int target) {
+    public static (int a, int b)? FindPairs(int[] nums, int target) {
         if (nums == null || nums.Length < 2)
-            return Result<(int, int)>.Failure(ErrorType.NotFound);
+            return null;
 
         Dictionary<int, int> hashmap = [];
 
@@ -16,12 +16,12 @@ public class PairSumUnsorted {
             int x = nums[i];
 
             if (hashmap.ContainsKey(target - x)) {
-                return Result<(int, int)>.Success((i, hashmap[target - x]));
+                return (i, hashmap[target - x]);
             }
 
             hashmap[x] = i;
         }
 
-        return Result<(int, int)>.Failure(ErrorType.NotFound);
+        return null;
     }
 }
