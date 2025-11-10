@@ -9,12 +9,11 @@ public class Result<T> {
     private Result(ErrorType error) {
         IsSuccess = false;
         Error = error;
-        Value = default;
     }
 
     public bool IsSuccess { get; }
 
-    public ErrorType Error { get; }
+    public ErrorType? Error { get; }
 
     public T? Value { get; }
 
