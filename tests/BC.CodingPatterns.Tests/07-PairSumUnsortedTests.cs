@@ -9,4 +9,9 @@ public class PairSumUnsortedTests {
 
         Assert.Null(result);
     }
+
+    [Fact]
+    public void FindPairs_InputLengthLessThanTwo_ReturnsNull() {
+
+    }
 }
