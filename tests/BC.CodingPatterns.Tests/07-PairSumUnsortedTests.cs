@@ -24,5 +24,10 @@ public class PairSumUnsortedTests {
     [Fact]
     public void FindPairs_PairFound_ReturnsPair() {
         int[] nums = [-1, 3, 4, 2];
+        int target = 3;
+
+        var pair = PairSumUnsorted.FindPairs(nums, target);
+
+        Assert.NotNull(pair);
     }
 }
