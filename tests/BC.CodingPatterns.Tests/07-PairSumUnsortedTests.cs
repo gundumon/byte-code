@@ -21,14 +21,12 @@ public class PairSumUnsortedTests {
         Assert.Null(result);
     }
 
-    [Fact]
-    public void FindPairs_PairFound_ReturnsPair() {
-        int[] nums = [-1, 3, 4, 2];
-        int target = 3;
-
+    [Theory]
+    [InlineData([new int[] { -1, 3, 4, 2 }, 3])]
+    public void FindPairs_PairFound_ReturnsPair(int[] nums, int target) {
         var pair = PairSumUnsorted.FindPairs(nums, target);
 
         Assert.NotNull(pair);
-        Assert.Equal((2, 0), pair);
+        Assert.Equal(target, pair.Value.a + pair.Value.b);
     }
 }
