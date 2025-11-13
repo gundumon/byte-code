@@ -24,4 +24,8 @@ public class PairSumUnsorted {
 
         return null;
     }
+
+    public static (int a, int b)[] FindAllPairs(int[] nums, int target) {
+        return [];
+    }
 }
