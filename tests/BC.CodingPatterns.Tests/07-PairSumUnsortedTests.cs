@@ -27,6 +27,6 @@ public class PairSumUnsortedTests {
         var pair = PairSumUnsorted.FindPairs(nums, target);
 
         Assert.NotNull(pair);
-        Assert.Equal(target, pair.Value.a + pair.Value.b);
+        Assert.Equal(target, nums[pair.Value.a] + nums[pair.Value.b]);
     }
 }
