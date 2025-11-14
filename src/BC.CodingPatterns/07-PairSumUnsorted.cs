@@ -31,6 +31,8 @@ public class PairSumUnsorted {
             return [];
         }
 
+        Dictionary<int, List<int>> hashmap = [];
+
         return [];
     }
 }
