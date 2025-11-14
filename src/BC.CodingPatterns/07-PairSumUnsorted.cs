@@ -7,8 +7,9 @@ Constraint: The same index cannot be used twice in the result
 */
 public class PairSumUnsorted {
     public static (int a, int b)? FindPairs(int[] nums, int target) {
-        if (nums == null || nums.Length < 2)
+        if (nums == null || nums.Length < 2) {
             return null;
+        }
 
         Dictionary<int, int> hashmap = [];
 
@@ -26,6 +27,10 @@ public class PairSumUnsorted {
     }
 
     public static (int a, int b)[] FindAllPairs(int[] nums, int target) {
+        if (nums == null || nums.Length < 2) {
+            return [];
+        }
+
         return [];
     }
 }
