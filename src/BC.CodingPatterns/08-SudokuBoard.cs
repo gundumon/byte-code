@@ -1,4 +1,4 @@
-﻿namespace CodingPatterns;
+﻿namespace BC.CodingPatterns;
 
 /*
 Given a partially completed 9×9 Sudoku board, determine if the current state of the board adheres to the rules of the game:
