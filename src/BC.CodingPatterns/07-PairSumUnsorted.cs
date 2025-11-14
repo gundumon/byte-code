@@ -25,14 +25,4 @@ public class PairSumUnsorted {
 
         return null;
     }
-
-    public static (int a, int b)[] FindAllPairs(int[] nums, int target) {
-        if (nums == null || nums.Length < 2) {
-            return [];
-        }
-
-        Dictionary<int, List<int>> hashmap = [];
-
-        return [];
-    }
 }
