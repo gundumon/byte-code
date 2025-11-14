@@ -16,8 +16,8 @@ public class SudokuBoard {
 
 
         for (int i = 0; i < 9; i++) {
-            row_sets.Add(new HashSet<int>());
-            column_sets.Add(new HashSet<int>());
+            row_sets.Add([]);
+            column_sets.Add([]);
         }
 
         for (int r = 0; r < 3; r++) {
