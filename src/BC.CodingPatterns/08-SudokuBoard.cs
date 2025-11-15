@@ -11,13 +11,13 @@ Constraings:
 public class SudokuBoard {
     public static bool Verify(List<List<int>> board) {
         List<HashSet<int>> rows = [];
-        List<HashSet<int>> column_sets = [];
+        List<HashSet<int>> columns = [];
         HashSet<int>[,] subgrid_sets = new HashSet<int>[3, 3];
 
 
         for (int i = 0; i < 9; i++) {
             rows.Add([]);
-            column_sets.Add([]);
+            columns.Add([]);
         }
 
         for (int r = 0; r < 3; r++) {
@@ -37,7 +37,7 @@ public class SudokuBoard {
                     return false;
                 }
 
-                if (column_sets[c].Contains(num)) {
+                if (columns[c].Contains(num)) {
                     return false;
                 }
 
@@ -46,7 +46,7 @@ public class SudokuBoard {
                 }
 
                 rows[r].Add(num);
-                column_sets[c].Add(num);
+                columns[c].Add(num);
                 subgrid_sets[r / 3, c / 3].Add(num);
             }
         }
