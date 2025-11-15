@@ -12,7 +12,7 @@ public class SudokuBoard {
     public static bool Verify(List<List<int>> board) {
         List<HashSet<int>> rows = [];
         List<HashSet<int>> columns = [];
-        HashSet<int>[,] subgrid_sets = new HashSet<int>[3, 3];
+        HashSet<int>[,] subgrids = new HashSet<int>[3, 3];
 
 
         for (int i = 0; i < 9; i++) {
@@ -22,7 +22,7 @@ public class SudokuBoard {
 
         for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 3; c++) {
-                subgrid_sets[r, c] = [];
+                subgrids[r, c] = [];
             }
         }
 
@@ -41,13 +41,13 @@ public class SudokuBoard {
                     return false;
                 }
 
-                if (subgrid_sets[r / 3, c / 3].Contains(num)) {
+                if (subgrids[r / 3, c / 3].Contains(num)) {
                     return false;
                 }
 
                 rows[r].Add(num);
                 columns[c].Add(num);
-                subgrid_sets[r / 3, c / 3].Add(num);
+                subgrids[r / 3, c / 3].Add(num);
             }
         }
 
