@@ -5,4 +5,9 @@ public class SudokuBoardTests {
     public void Verify_ValidBoard_ReturnsTrue() {
 
     }
+
+    [Fact]
+    public void Verify_InvalidBoard_ReturnsFalse() {
+
+    }
 }
