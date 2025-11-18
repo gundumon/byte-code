@@ -1,9 +1,17 @@
+using BC.Helpers;
+
 namespace BC.CodingPatterns;
 
 /*
 Given an array of integers sorted in ascending order and a target value, return any / all pair of numbers in the array that sum to the target. If no pair is found, return an empty array.
 */
 public class PairSumSorted {
+    public static Result<Pair<int>> FindIndex(int[] nums, int target) {
+        if (nums.Length < 2) {
+            return Result<Pair<int>>.Failure(Error.InvalidInput(string.Empty));
+        }
+    }
+
     public static (int a, int b)? FindAnyPair(int[] nums, int target) {
         if (nums == null || nums.Length < 2)
             return null;

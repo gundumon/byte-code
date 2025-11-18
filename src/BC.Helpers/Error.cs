@@ -7,9 +7,9 @@ public class Error(ErrorType errorType, string message) {
 
     public static Error Empty() => new(ErrorType.Empty, string.Empty);
 
-    public static Error NotFound(string message) => new(ErrorType.NotFound, message);
+    public static Error NotFound(string message = "") => new(ErrorType.NotFound, message);
 
-    public static Error InvalidInput(string message) => new(ErrorType.InvalidInput, message);
+    public static Error InvalidInput(string message = "") => new(ErrorType.InvalidInput, message);
 
-    public static Error Validation(string message) => new(ErrorType.Validation, message);
+    public static Error Validation(string message = "") => new(ErrorType.Validation, message);
 }
