@@ -102,6 +102,15 @@ public class PairSumSorted {
 
     public static Result<List<Pair<int>>> FindPairs(int[] nums, int target) {
         var result = FindIndexes(nums, target);
+
+        if (!result.IsSuccess) {
+            return result;
+        }
+
+        List<Pair<int>> pairs = [];
+        result.Value?.ForEach(p => pairs.Add(new(nums[p.X], nums[p.Y])));
+
+        return Result<List<Pair<int>>>.Success(pairs);
     }
 
     public static (int a, int b)? FindAnyPair(int[] nums, int target) {
