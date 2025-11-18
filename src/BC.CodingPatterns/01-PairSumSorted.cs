@@ -1,3 +1,4 @@
+using System.Globalization;
 using BC.Helpers;
 
 namespace BC.CodingPatterns;
@@ -39,6 +40,42 @@ public class PairSumSorted {
         }
 
         return Result<Pair<int>>.Success(new(nums[result.Value.X], nums[result.Value.Y]));
+    }
+
+    public static Result<List<Pair<int>>> FindIndexes(int[] nums, int target) {
+        if (nums.Length < 2) {
+            return Result<List<Pair<int>>>.Failure(Error.InvalidInput());
+        }
+
+        List<Pair<int>> pairs = [];
+
+        int left = 0;
+        int right = nums.Length - 1;
+
+        while (left < right) {
+            var sum = nums[left] + nums[right];
+
+            if (sum == target) {
+                var lnum = nums[left];
+                var rnum = nums[right];
+
+                if (lnum == rnum) {
+                    for (int i = left; i <= right; i++) {
+                        for (int j = i + 1; j <= right; j++) {
+                            pairs.Add(new(i, j));
+                        }
+                    }
+                }
+            }
+            else if (sum > target) {
+                right -= 1;
+            }
+            else {
+                left += 1;
+            }
+        }
+
+        return Result<List<Pair<int>>>.Success(pairs);
     }
 
     public static (int a, int b)? FindAnyPair(int[] nums, int target) {
