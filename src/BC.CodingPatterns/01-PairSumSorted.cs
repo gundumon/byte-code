@@ -1,4 +1,3 @@
-using System.Globalization;
 using BC.Helpers;
 
 namespace BC.CodingPatterns;
