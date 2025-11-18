@@ -31,6 +31,16 @@ public class PairSumSorted {
         return Result<Pair<int>>.Failure(Error.NotFound());
     }
 
+    public static Result<Pair<int>> FindPair(int[] nums, int target) {
+        var result = FindIndex(nums, target);
+
+        if (!result.IsSuccess) {
+            return result;
+        }
+
+        return Result<Pair<int>>.Success(new(nums[result.Value.X], nums[result.Value.Y]));
+    }
+
     public static (int a, int b)? FindAnyPair(int[] nums, int target) {
         if (nums == null || nums.Length < 2)
             return null;
