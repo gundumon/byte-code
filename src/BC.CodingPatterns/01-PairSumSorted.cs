@@ -65,6 +65,28 @@ public class PairSumSorted {
                             pairs.Add(new(i, j));
                         }
                     }
+
+                    left = right;
+                }
+                else {
+                    int ltemp = left;
+                    while (ltemp < right && nums[ltemp] == lnum) {
+                        ltemp++;
+                    }
+
+                    int rtemp = right;
+                    while (rtemp > left && nums[rtemp] == rnum) {
+                        rtemp--;
+                    }
+
+                    for (int i = left; i < ltemp; i++) {
+                        for (int j = right; j > rtemp; j--) {
+                            pairs.Add(new(i, j));
+                        }
+                    }
+
+                    left = ltemp;
+                    right = rtemp;
                 }
             }
             else if (sum > target) {
@@ -76,6 +98,10 @@ public class PairSumSorted {
         }
 
         return Result<List<Pair<int>>>.Success(pairs);
+    }
+
+    public static Result<List<Pair<int>>> FindPairs(int[] nums, int target) {
+        var result = FindIndexes(nums, target);
     }
 
     public static (int a, int b)? FindAnyPair(int[] nums, int target) {
