@@ -5,6 +5,9 @@ For each zero in an m x n matrix, set its entire row and column to zero in place
 */
 public class ZeroStripping {
     public static List<List<int>> SetZeroes(List<List<int>> matrix) {
+        if (matrix.Count == 0)
+            return [];
+
         HashSet<int> zero_rows = [];
         HashSet<int> zero_columns = [];
 
