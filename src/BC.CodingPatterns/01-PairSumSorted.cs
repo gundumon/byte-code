@@ -8,7 +8,14 @@ Given an array of integers sorted in ascending order and a target value, return 
 public class PairSumSorted {
     public static Result<Pair<int>> FindIndex(int[] nums, int target) {
         if (nums.Length < 2) {
-            return Result<Pair<int>>.Failure(Error.InvalidInput(string.Empty));
+            return Result<Pair<int>>.Failure(Error.InvalidInput());
+        }
+
+        int left = 0;
+        int right = nums.Length - 1;
+
+        while (left < right) {
+
         }
     }
 
