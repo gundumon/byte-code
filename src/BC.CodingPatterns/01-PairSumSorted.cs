@@ -15,8 +15,20 @@ public class PairSumSorted {
         int right = nums.Length - 1;
 
         while (left < right) {
+            var sum = nums[left] + nums[right];
 
+            if (sum == target) {
+                return Result<Pair<int>>.Success(new(left, right));
+            }
+            else if (sum > target) {
+                right -= 1;
+            }
+            else {
+                left += 1;
+            }
         }
+
+        return Result<Pair<int>>.Failure(Error.NotFound());
     }
 
     public static (int a, int b)? FindAnyPair(int[] nums, int target) {
