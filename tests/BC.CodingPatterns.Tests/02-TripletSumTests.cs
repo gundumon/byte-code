@@ -1,24 +1,24 @@
-﻿namespace BC.CodingPatterns.Tests;
+﻿using System.Security.Cryptography;
+
+namespace BC.CodingPatterns.Tests;
 
 public class TripletSumTests {
     [Fact]
-    public void FindAllTriplets_EmptyInput_ReturnsEmpty() {
+    public void FindAllTriplets_EmptyInput_ReturnsFailure() {
         int[] nums = [];
 
-        HashSet<(int a, int b, int c)> result = TripletSum.FindAllTriplets(nums);
+        var triplets = TripletSum.FindAllTriplets(nums);
 
-        Assert.NotNull(result);
-        Assert.Empty(result);
+        Assert.False(triplets.IsSuccess);
     }
 
     [Fact]
-    public void FindAllTriplets_InputLengthLessThanThree_ReturnsEmpty() {
+    public void FindAllTriplets_InputLengthLessThanThree_ReturnsFailure() {
         int[] nums = [1, 2];
 
-        HashSet<(int a, int b, int c)> result = TripletSum.FindAllTriplets(nums);
+        var triplets = TripletSum.FindAllTriplets(nums);
 
-        Assert.NotNull(result);
-        Assert.Empty(result);
+        Assert.False(triplets.IsSuccess);
     }
 
     [Theory]
