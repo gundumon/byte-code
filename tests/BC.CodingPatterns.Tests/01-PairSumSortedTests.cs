@@ -76,7 +76,7 @@ public class PairSumSortedTests {
         var result = PairSumSorted.FindPair(nums, target);
 
         Assert.True(result.IsSuccess);
-        Assert.Equal(target, nums[result.Value.X] + nums[result.Value.Y]);
+        Assert.Equal(target, result.Value.X + result.Value.Y);
     }
 
     [Fact]
@@ -160,6 +160,6 @@ public class PairSumSortedTests {
 
         Assert.True(result.IsSuccess);
         Assert.NotNull(result.Value);
-        Assert.All(result.Value, p => target.Equals(nums[p.X] + nums[p.Y]));
+        Assert.All(result.Value, p => target.Equals(p.X + p.Y));
     }
 }
