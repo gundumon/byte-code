@@ -8,6 +8,6 @@ A two-pointer pattern refers to an algorithm that utilizes two pointers. Two-poi
 A two-pointer algorithm usually requires a linear data structure, such as an array or linked list. Otherwise, an indication that a problem can be solved using the two-pointer algorithm, is when the input follows a predictable dynamic, such as a sorted array
 
 ## Examples
-1. [Pair Sum Sorted](./01-PairSum.cs)
+1. [Pair Sum Sorted](./01-PairSumSorted.cs)
 1. [Triplet Sum](./02-TripletSum.cs)
 1. [Palindrome](./03-Palindrome.cs)
