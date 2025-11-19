@@ -23,11 +23,11 @@ public class TripletSum {
             var startIndex = targetIndex + 1;
             var temp = nums[startIndex..];
             
-            var pairs = PairSum.FindAllPairs(temp, target * -1);
+            //var pairs = PairSumSorted.FindAllPairs(temp, target * -1);
 
-            foreach (var (a, b) in pairs) {
-                triplets.Add((target, a, b));
-            }
+            //foreach (var (a, b) in pairs) {
+            //    triplets.Add((target, a, b));
+            //}
 
             targetIndex += 1;
             while ((targetIndex < nums.Length) && (nums[targetIndex] == target))
