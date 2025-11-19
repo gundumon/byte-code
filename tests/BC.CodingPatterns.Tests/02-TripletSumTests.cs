@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace BC.CodingPatterns.Tests;
+﻿namespace BC.CodingPatterns.Tests;
 
 public class TripletSumTests {
     [Fact]
