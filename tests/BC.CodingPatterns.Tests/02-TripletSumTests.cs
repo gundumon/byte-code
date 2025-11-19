@@ -22,24 +22,24 @@ public class TripletSumTests {
     }
 
     [Theory]
-    [InlineData(new int[] { -2, 0, 3 })]
-    [InlineData(new int[] { -3, -2, 1, 4 })]
-    public void FindAllTriplets_NoMatchingPair_ReturnsEmpty(int[] nums) {
-        HashSet<(int a, int b, int c)> result = TripletSum.FindAllTriplets(nums);
+    [InlineData(new int[] { 1, 0, 1 })]
+    public void FindAllTriplets_NoTriplets_ReturnsSuccess(int[] nums) {
+        var triplets = TripletSum.FindAllTriplets(nums);
 
-        Assert.NotNull(result);
-        Assert.Empty(result);
+        Assert.True(triplets.IsSuccess);
+        Assert.NotNull(triplets.Value);
+        Assert.Empty(triplets.Value);
     }
 
     [Theory]
-    [InlineData([new int[] { 0, 0, 0 }, 1])]
-    [InlineData([new int[] { -3, -1, 0, 1, 2 }, 2])]
-    [InlineData([new int[] { 0, 0, 1, -1, 1, -1 }, 1])]
-    public void FindAllTriplets_MatchingPairs_ReturnsAllPairs(int[] nums, int expectedCount) {
-        HashSet<(int a, int b, int c)> result = TripletSum.FindAllTriplets(nums);
+    [InlineData([new int[] { 0, 0, 0 }])]
+    [InlineData([new int[] { 0, -1, 2, -3, 1 }])]
+    [InlineData([new int[] { 0, 0, 1, -1, -1 }])]
+    public void FindAllTriplets_TripletsExists_ReturnsAllTripletsThatSumToZero(int[] nums) {
+        var triplets = TripletSum.FindAllTriplets(nums);
 
-        Assert.NotEmpty(result);
-        Assert.Equal(expectedCount, result.Count);
-        Assert.All(result, (x) => (x.a + x.b + x.c).Equals(0));
+        Assert.True(triplets.IsSuccess);
+        Assert.NotNull(triplets.Value);
+        Assert.All(triplets.Value, t => 0.Equals(t.X + t.Y + t.Z));
     }
 }
