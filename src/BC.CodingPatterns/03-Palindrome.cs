@@ -5,6 +5,11 @@ Given a string, determine if it's a palindrome after removing all non-alphanumer
 */
 public class Palindrome {
     public static bool IsValid(string input) {
-        
+        if (string.IsNullOrWhiteSpace(input)) {
+            return true;
+        }
+
+        int left = 0;
+        int right = input.Length - 1;
     }
 }
