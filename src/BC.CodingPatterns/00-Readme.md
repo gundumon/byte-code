@@ -12,3 +12,4 @@ A two-pointer algorithm usually requires a linear data structure, such as an arr
 1. [Triplet Sum](./02-TripletSum.cs)
 1. [Palindrome](./03-Palindrome.cs)
 1. [Largest Container](./04-LargestContainer.cs)
+1. [Shift Zero]
