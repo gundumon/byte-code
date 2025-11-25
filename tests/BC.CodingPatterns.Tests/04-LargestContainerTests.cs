@@ -18,4 +18,12 @@ public class LargestContainerTests {
 
         Assert.Equal(0, result);
     }
+
+    [Theory]
+    [InlineData(new int[] { 0, 1, 0 }, 0)]
+    public void FindLargestArea_ValidInput_ReturnsZero(int[] heights, int expected) {
+        var result = LargestContainer.FindLargestArea(heights);
+
+        Assert.Equal(expected, result);
+    }
 }
