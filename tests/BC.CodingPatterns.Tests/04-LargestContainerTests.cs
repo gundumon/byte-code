@@ -11,7 +11,8 @@ public class LargestContainerTests {
         int largest_area = 0;
 
         while (left < right) {
-            //
+            var area = Math.Min(heights[left], heights[right]) * (right - left);
+            largest_area = Math.Max(largest_area, area);
         }
 
         return largest_area;
