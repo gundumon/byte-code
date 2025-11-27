@@ -8,5 +8,11 @@ public class ShiftZeroes {
         if (nums.Length < 2) {
             return nums;
         }
+
+        int left = 0;
+
+        for (int right = 0; right < nums.Length; right++) {
+
+        }
     }
 }
