@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace BC.CodingPatterns;
+﻿namespace BC.CodingPatterns;
 
 /*
 Given an array of integers, modify the array in place to move all zeros to the end while maintaining the relative order of non-zero elements.
@@ -18,7 +16,11 @@ public class ShiftZeroes {
                 if (right != left) {
                     (nums[left], nums[right]) = (nums[right], nums[left]);
                 }
+
+                left += 1;
             }
         }
+
+        return nums;
     }
 }
