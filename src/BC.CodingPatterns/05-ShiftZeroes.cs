@@ -15,7 +15,9 @@ public class ShiftZeroes {
 
         for (int right = 0; right < nums.Length; right++) {
             if (nums[right] != 0) {
-
+                if (right != left) {
+                    (nums[left], nums[right]) = (nums[right], nums[left]);
+                }
             }
         }
     }
