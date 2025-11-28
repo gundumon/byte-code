@@ -1,5 +1,5 @@
 ﻿namespace BC.CodingPatterns.Tests;
 
-public class ShiftZeroTests {
+public class ShiftZeroesTests {
     //
 }
