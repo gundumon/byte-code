@@ -9,4 +9,9 @@ public class ShiftZeroesTests {
 
         Assert.True(Enumerable.SequenceEqual(nums, result));
     }
+
+    [Fact]
+    public void ShiftToEnd_InputLengthLessThanTwo_ReturnsInput() {
+
+    }
 }
