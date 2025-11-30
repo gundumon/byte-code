@@ -19,6 +19,7 @@ public class ShiftZeroesTests {
         Assert.True(Enumerable.SequenceEqual(nums, result));
     }
 
+    [Theory]
     public void ShiftToEnd_ValidInput_ReturnsInputWithZeroesAtEnd(int[] nums, int[] expected) {
         var result = ShiftZeroes.ShiftToEnd(nums);
 
