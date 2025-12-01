@@ -21,6 +21,7 @@ public class ShiftZeroesTests {
 
     [Theory]
     [InlineData([new int[] { 0, 1, 0, 3, 2 }, new int[] { 1, 3, 2, 0, 0 }])]
+    [InlineData([new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 }])]
     public void ShiftToEnd_ValidInput_ReturnsInputWithZeroesAtEnd(int[] nums, int[] expected) {
         var result = ShiftZeroes.ShiftToEnd(nums);
 
