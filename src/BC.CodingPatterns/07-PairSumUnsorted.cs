@@ -1,4 +1,6 @@
-﻿namespace BC.CodingPatterns;
+﻿using BC.Helpers;
+
+namespace BC.CodingPatterns;
 
 /*
 Given an array of integers, return the indexes of any two numbers that add up to a target. 
@@ -7,23 +9,13 @@ The order of the indexes in the result doesn't matter. If no pair is found, retu
 Constraint: The same index cannot be used twice in the result
 */
 public class PairSumUnsorted {
-    public static (int a, int b)? FindPairs(int[] nums, int target) {
-        if (nums == null || nums.Length < 2) {
-            return null;
+    public static Result<Pair<int>> FindIndex(int[] nums, int target) {
+        if (nums.Length < 2) {
+            return Result<Pair<int>>.Failure(Error.InvalidInput());
         }
 
-        Dictionary<int, int> hashmap = [];
+        Dictionary<int, int> map = [];
 
-        for(int i = 0; i < nums.Length; i++) {
-            int x = nums[i];
 
-            if (hashmap.ContainsKey(target - x)) {
-                return (i, hashmap[target - x]);
-            }
-
-            hashmap[x] = i;
-        }
-
-        return null;
     }
 }
