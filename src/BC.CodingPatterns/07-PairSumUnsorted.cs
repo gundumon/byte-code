@@ -16,6 +16,16 @@ public class PairSumUnsorted {
 
         Dictionary<int, int> map = [];
 
+        for (int i = 0; i < nums.Length; i++) {
+            int num = nums[i];
 
+            if (map.ContainsKey(target - num)) {
+                return Result<Pair<int>>.Success(new(map[target - num], i));
+            }
+
+            map.Add(num, i);
+        }
+
+        return Result<Pair<int>>.Failure(Error.NotFound());
     }
 }
