@@ -48,4 +48,10 @@ public class PairSumUnsorted {
 
         return Result<Pair<int>>.Failure(Error.NotFound());
     }
+
+    public static Result<List<Pair<int>>> FindIndexes(int[] nums, int target) {
+        if (nums.Length < 2) {
+            return Result<List<Pair<int>>>.Failure(Error.InvalidInput());
+        }
+    }
 }
