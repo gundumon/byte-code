@@ -3,7 +3,10 @@ using BC.Helpers;
 namespace BC.CodingPatterns;
 
 /*
-Given an array of integers sorted in ascending order and a target value, return any / all pair of numbers in the array that sum to the target. If no pair is found, return an empty array.
+Given an array of integers sorted in ascending order and a target value, return 
+any / all pair of numbers in the array that sum to the target. 
+
+If no pair is found, return an empty array.
 */
 public class PairSumSorted {
     public static Result<Pair<int>> FindIndex(int[] nums, int target) {
