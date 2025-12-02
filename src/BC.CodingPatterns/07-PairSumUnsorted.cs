@@ -28,4 +28,24 @@ public class PairSumUnsorted {
 
         return Result<Pair<int>>.Failure(Error.NotFound());
     }
+
+    public static Result<Pair<int>> FindPair(int[] nums, int target) {
+        if (nums.Length < 2) {
+            return Result<Pair<int>>.Failure(Error.InvalidInput());
+        }
+
+        Dictionary<int, int> map = [];
+
+        for (int i = 0; i < nums.Length; i++) {
+            int num = nums[i];
+
+            if (map.ContainsKey(target - num)) {
+                return Result<Pair<int>>.Success(new(target - num, num));
+            }
+
+            map.Add(num, i);
+        }
+
+        return Result<Pair<int>>.Failure(Error.NotFound());
+    }
 }
