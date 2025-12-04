@@ -57,4 +57,12 @@ public class PairSumUnsortedTests {
 
         Assert.False(result.IsSuccess);
     }
+
+    [Theory]
+    [InlineData([new int[] { 0, 2, 4 }, 5])]
+    public void FindPair_NoPairs_ReturnsFailure(int[] nums, int target) {
+        var result = PairSumUnsorted.FindPair(nums, target);
+
+        Assert.False(result.IsSuccess);
+    }
 }
