@@ -37,4 +37,14 @@ public class PairSumUnsortedTests {
         Assert.True(result.IsSuccess);
         Assert.Equal(target, nums[result.Value.X] + nums[result.Value.Y]);
     }
+
+    [Fact]
+    public void FindPair_EmptyInput_ReturnsFailure() {
+        int[] nums = [];
+        int target = 5;
+
+        var result = PairSumUnsorted.FindPair(nums, target);
+
+        Assert.False(result.IsSuccess);
+    }
 }
