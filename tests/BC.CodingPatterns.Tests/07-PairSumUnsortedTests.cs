@@ -68,8 +68,8 @@ public class PairSumUnsortedTests {
 
     [Theory]
     [InlineData(new int[] { -1, 2, 4, 5, 3 }, 3)]
-    public void FindIndex_PairExists_ReturnsPairThatSumToTarget(int[] nums, int target) {
-        var result = PairSumUnsorted.FindIndex(nums, target);
+    public void FindPair_PairExists_ReturnsPairThatSumToTarget(int[] nums, int target) {
+        var result = PairSumUnsorted.FindPair(nums, target);
 
         Assert.True(result.IsSuccess);
         Assert.Equal(target, nums[result.Value.X] + nums[result.Value.Y]);
