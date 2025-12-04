@@ -49,11 +49,11 @@ public class PairSumUnsortedTests {
     }
 
     [Fact]
-    public void FindIndex_InputLengthLessThanTwo_ReturnsFailure() {
+    public void FindPair_InputLengthLessThanTwo_ReturnsFailure() {
         int[] nums = [1];
         int target = 5;
 
-        var result = PairSumUnsorted.FindIndex(nums, target);
+        var result = PairSumUnsorted.FindPair(nums, target);
 
         Assert.False(result.IsSuccess);
     }
