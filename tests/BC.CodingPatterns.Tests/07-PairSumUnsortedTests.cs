@@ -77,6 +77,11 @@ public class PairSumUnsortedTests {
 
     [Fact]
     public void FindIndexes_EmptyInput_ReturnsFailure() {
+        int[] nums = [];
+        int target = 5;
 
+        var result = PairSumSorted.FindIndexes(nums, target);
+
+        Assert.False(result.IsSuccess);
     }
 }
