@@ -84,4 +84,9 @@ public class PairSumUnsortedTests {
 
         Assert.False(result.IsSuccess);
     }
+
+    [Fact]
+    public void FindIndexes_InputLengthLessThanTwo_ReturnsFailure() {
+
+    }
 }
