@@ -87,6 +87,11 @@ public class PairSumUnsortedTests {
 
     [Fact]
     public void FindIndexes_InputLengthLessThanTwo_ReturnsFailure() {
+        int[] nums = [1];
+        int target = 5;
 
+        var result = PairSumSorted.FindIndexes(nums, target);
+
+        Assert.False(result.IsSuccess);
     }
 }
