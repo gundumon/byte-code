@@ -74,4 +74,9 @@ public class PairSumUnsortedTests {
         Assert.True(result.IsSuccess);
         Assert.Equal(target, result.Value.X + result.Value.Y);
     }
+
+    [Fact]
+    public void FindIndexes_EmptyInput_ReturnsFailure() {
+
+    }
 }
