@@ -98,6 +98,8 @@ public class PairSumUnsortedTests {
     [Theory]
     [InlineData(new int[] { -1, 2, 4, 5, 3 }, 3)]
     public void FindIndexes_NoPairs_ReturnsFailure(int[] nums, int target) {
+        var result = PairSumUnsorted.FindPair(nums, target);
 
+        Assert.False(result.IsSuccess);
     }
 }
