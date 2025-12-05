@@ -68,7 +68,7 @@ public class PairSumUnsortedTests {
 
     [Theory]
     [InlineData(new int[] { -1, 2, 4, 5, 3 }, 3)]
-    public void FindPair_PairExists_ReturnsPairThatSumToTarget(int[] nums, int target) {
+    public void FindPair_PairExists_ReturnsPairsThatSumToTarget(int[] nums, int target) {
         var result = PairSumUnsorted.FindPair(nums, target);
 
         Assert.True(result.IsSuccess);
@@ -104,7 +104,11 @@ public class PairSumUnsortedTests {
     }
 
     [Theory]
-    public void FindIndexes_PairExists_ReturnsPairsThatSumToTarget() {
+    [InlineData(new int[] { -1, 2, 4, 5, 3 }, 3)]
+    public void FindIndexes_PairExists_ReturnsPairsThatSumToTarget(int[] nums, int target) {
+        var result = PairSumUnsorted.FindPair(nums, target);
 
+        Assert.True(result.IsSuccess);
+        Assert.Equal(target, result.Value.X + result.Value.Y);
     }
 }
