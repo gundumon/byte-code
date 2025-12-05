@@ -102,4 +102,9 @@ public class PairSumUnsortedTests {
 
         Assert.False(result.IsSuccess);
     }
+
+    [Theory]
+    public void FindIndexes_PairExists_ReturnsPairsThatSumToTarget() {
+
+    }
 }
